@@ -4,8 +4,9 @@
 - important that coarser layers strictly encage finer layers
   - that way layers are *nested*
   - existing techniques do not provide sufficient control over quality of output surfaces while maintaining strict nesting
-    - existing techniques such as surface mesh decimation, voxelization, contouring distance level sets
+    - existing techniques include surface mesh decimation, voxelization, contouring distance level sets
 - paper enables use of application-specific decimation and quality metrics
+  - any decimation algorithm can be used
   - method constructs each next-coarsest level of hierarchhy using sequence of decimation, flow, contact-aware optimization steps
 - will use $C$ to denote cage (coarse mesh) around original fine mesh $F$
 
@@ -27,4 +28,30 @@
   - method can be generalized from watertight meshes to polygon soups
 - nested cage algorithm - given 
 - paper presents practical algorithm for solving nested cage problem on typical meshes
-  - method is agnostic to decemation scheme used to create $\hat{C}$
+  - method is agnostic to decimation scheme used to create $\hat{C}$
+
+## Method
+
+Input:
+
+- $k+1$ potentially overlapping meshes $\hat{M_0}$, $\hat{M_1}$, $...$, $\hat{M_k}$
+  - a mesh $M_i$ is a list of initial vertex positions $\hat{\mathbf{M}_i}$ and a list of triangle indices $\mathbf{T}_i$
+- typically $\hat{M_0}$ is the high res original mesh, and each mesh after is coarser than the last
+
+Output:
+
+- new vertex positions $\mathbf{M}_1$, $...$, $\mathbf{M}_k$ so that for $i = 1 ... k$ each $M_i = (\mathbf{M}_i, \mathbf{T}_i)$ is a deformed mesh that nests $M_{i-1}$
+
+Algorithm:
+
+```python
+def nested_cages(M_hat[0..k], Energy):
+    M[0..k] = []                            # output list
+    M[0] = M_hat[0]                         # finest mesh is unchanged
+    for i in 1..k:
+        F = M[i-1]
+        C_hat = M_hat[i]
+        H = Shrink(C_hat, F)                # H = shrink F until it fits inside C_hat
+        M[i] = Reinflate(H, C_hat, Energy)  # M[i] = C_hat after inflating H inside it
+                                            #        while minimizing energy
+```
