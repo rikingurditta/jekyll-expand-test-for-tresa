@@ -53,3 +53,21 @@ Approach:
   - use comparably smoothed arbitrarily close approximation to static friction (so no explicit Coulomb constant constraint needed)
     - cast friction forces at every timestep in a dissipative potential form
     - friction is resolved in same solver
+
+## Method
+
+### Contact model
+
+- $x$ is the positions of all $n$ nodes (so $\dot x$ is their velocities)
+- $M$ is the FEM mass matrix for the nodes
+- $\Psi(x)$ is the deformation energy of the material
+- $f_e$ is the external forces on the nodes
+- $f_d$ is the dissipative forces, i.e. frictional forces
+- $T$ is the total time
+- $\mathcal A$ is the set of admissible trajectories
+
+We consider the energy
+
+$$
+S(x) = \int_0^T \left( \frac{1}{2} \dot x^T M \dot x + \Psi(x) + x^T \left( f_e + f_d \right) \right) dt
+$$
