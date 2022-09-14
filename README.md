@@ -4,5 +4,5 @@ This
 
 ### Notes on relevant papers
 
-- [Nested Cages](notes/nested cages)
-- [Incremental Potential Contact](notes/incremental potential contact)
+- [Nested Cages](nested cages)
+- [Incremental Potential Contact](incremental potential contact)
