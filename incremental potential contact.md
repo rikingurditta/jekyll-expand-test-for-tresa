@@ -71,3 +71,9 @@ We consider the energy
 $$
 S(x) = \int_0^T \left( \frac{1}{2} \dot x^T M \dot x + \Psi(x) + x^T \left( f_e + f_d \right) \right) dt
 $$
+
+on $\mathcal A$ the set of admissible trajectories
+
+Let $\mathcal A_1$ be the set of trajectories that are intersection free, i.e. distances between objects are always positive ($d(p, q) > 0$). This set is defined by a strict inequality, so the $\mathcal A_1$ is an open set. We take $\mathcal A$ to be the closure of $\mathcal A_1$, i.e. it is $\mathcal A_1$ union its boundary.
+
+Note that this isn't the set of trajectories where $d(p, q) \geq 0$, as that would be every trajectory since unsigned distance is nonnegative.
