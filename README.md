@@ -1,20 +1,15 @@
-# csc494
+# jekyll expand test for tresa
 
-This is my repo for notes I've taken for my CSC494 project on augmenting Nested Cages with IPC.
+testing [this thing](https://jekyllcodex.org/without-plugin/text-expand/#) for tresa leblanc-doucet math grad student at uoft doxxing her publicly
 
-## Notes on relevant papers
+[expand]
 
-- [Nested Cages](nested cages)
-- [Incremental Potential Contact](incremental potential contact)
+text hi ummmmm hiii
 
-## (Proposed) Timeline
+![hi](https://cdn.discordapp.com/attachments/712051325944463451/1022333027185074300/unknown.png)
 
-need guidance on this timeline !
+$$
+S(x) = \int_0^T \left( \frac{1}{2} \dot x^T M \dot x + \Psi(x) + x^T \left( f_e + f_d \right) \right) dt
+$$
 
-| Date   | Code/Implementation goal                                     | Notes/Understanding goal                                     |
-| ------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Sep 27 | functions decided and implementation planned for nested cages (headers created) | notes on IPC contact model, contact mechanics, friction forces |
-| Oct 4  | implementation for nested cages flow done                    | notes on IPC distance computation                            |
-| Oct 11 | implementation for nested cages done aside from contact      |                                                              |
-| Oct 18 | start implementing IPC                                       |                                                              |
-| Nov 8  | finish implementing IPC? who knows                           |                                                              |
+[/expand]
