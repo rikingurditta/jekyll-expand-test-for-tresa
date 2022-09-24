@@ -41,13 +41,13 @@ you can also do it without that include using [\<details\>](https://developer.mo
 	<summary>hi funny guy click here to read more i promise no more funny pictures</summary>
 	<p>
 	some mroe text :shy:
-
-	![hi](https://cdn.discordapp.com/attachments/991193607115657337/1016860874469810186/20220906_182238.jpg)
-
+	<br>
+	<img src=https://cdn.discordapp.com/attachments/991193607115657337/1016860874469810186/20220906_182238.jpg />
+	<br>
 	$$
 	e^{i\pi} + 1 = 0
 	$$
-
-	i defined a `\R` command so i could write $\Tresa \Tresa \Tresa \Tresa \Tresa$ without typing `\mathcal{Tresa}` 7 times
+	<br>
+	i defined a `\Tresa` command so i could write $\Tresa \Tresa \Tresa \Tresa \Tresa$ without typing `\mathcal{Tresa}` 7 times
 	</p>
 </details>
